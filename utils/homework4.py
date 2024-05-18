@@ -1,6 +1,6 @@
 def get_text_without_step(text: str) -> str:
-    result = ''
+    result = ""
     for letter in text:
-        if letter != ' ':
+        if letter != " ":
             result += letter
     return result

@@ -51,5 +51,5 @@ jobs:
         run: |
           source .venv/bin/activate
           isort .
-          pytest .
           flake8 .
+          pytest .

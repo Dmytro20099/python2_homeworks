@@ -3,5 +3,5 @@ check:
 	@echo 'Starting code correction'
 	black .
 	isort .
-	flake8 .\main.py
+	flake8 .
 	@echo 'FINISH'
