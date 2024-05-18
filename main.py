@@ -15,7 +15,8 @@ def longest_string(first_str: str, second_str: str) -> str:
 def digit_list(user_list: list) -> bool:
     """DIGIT_LIST return True if your text has only digits, else: False,
     example1: digit_list([3, 5, 7, 2, 13, 7]) -> True
-    example2: digit_list([6, 5, 't', 'df', 7, 8, 3]) -> False"""
+    example2: digit_list([6, 5, 't', 'df', 7, 8, 3]) -> False
+    """
 
     result = True
     for symbol in user_list:
@@ -27,7 +28,7 @@ def digit_list(user_list: list) -> bool:
     return result
 
 
-print(digit_list([6, 5, 't', 'df', 7, 8, 3]))
+print(digit_list([6, 5, "t", "df", 7, 8, 3]))
 
 
 def random_symbols():
