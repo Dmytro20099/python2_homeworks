@@ -1,8 +1,5 @@
-.PHONY: check
-check:
-	@echo 'Starting code correction'
-	black .
+.PHONY: run
+run:
 	isort .
 	flake8 .
 	pytest .
-	@echo 'FINISH'
