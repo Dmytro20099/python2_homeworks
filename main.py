@@ -1,4 +1,4 @@
-def longest_string(first_str: str, second_str: str) -> str:
+def return_longest_string(first_str: str, second_str: str) -> str:
     """LONGEST_STRING return the longest text,
     example: longest_string('yy', 'yyy') -> 'yyy'"""
 
@@ -12,7 +12,7 @@ def longest_string(first_str: str, second_str: str) -> str:
     return result
 
 
-def digit_list(user_list: list) -> bool:
+def check_digit_list(user_list: list) -> bool:
     """DIGIT_LIST return True if your text has only digits, else: False,
     example1: digit_list([3, 5, 7, 2, 13, 7]) -> True
     example2: digit_list([6, 5, 't', 'df', 7, 8, 3]) -> False"""
@@ -27,10 +27,10 @@ def digit_list(user_list: list) -> bool:
     return result
 
 
-print(digit_list([6, 5, 't', 'df', 7, 8, 3]))
+print(check_digit_list([6, 5, 't', 'df', 7, 8, 3]))
 
 
-def random_symbols():
+def print_random_symbols():
     """PRINT_SYMBOLS print '/' % 50"""
 
     print("'/' % 50")
