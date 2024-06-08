@@ -16,6 +16,7 @@ def create_new_message(func: Callable, arg, delete_type) -> None:
             result.append(value)
             if type(value) == delete_type:
                 result.remove(value)
+        print(result)
         func(result)
     else:
         func(arg)
