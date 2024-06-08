@@ -16,11 +16,11 @@ def create_new_message(func: Callable, arg, delete_type) -> None:
             result.append(value)
             if type(value) == delete_type:
                 result.remove(value)
+        func(result)
     else:
-        result = arg
-    return result
+        func(arg)
 
 
 
-resul = create_new_message(func=input_message, arg=['5, 6, 8', 9], delete_type=str)
-print(resul)
+create_new_message(func=input_message, arg=['6666', 99], delete_type=int)
+
