@@ -5,7 +5,6 @@ types = [int, str, float]
 
 def input_message(message):
     result =  f'Your new message >>>> {message}'
-    print(result)
     return result
 
 
@@ -16,12 +15,12 @@ def create_new_message(func: Callable, arg, delete_type) -> None:
             result.append(value)
             if type(value) == delete_type:
                 result.remove(value)
-        print(result)
-        func(result)
+        new_message = func(result)
+        return new_message
     else:
-        func(arg)
+        new_message = func(arg)
+        return new_message
 
 
-
-create_new_message(func=input_message, arg=['6666', 99], delete_type=int)
-
+result_message = create_new_message(func=input_message, arg=['6666', 99], delete_type=int)
+print(result_message)
