@@ -1,26 +1,25 @@
-from typing import Callable
+from functools import wraps
+from typing import Callable, Any
 
 
-types = [int, str, float]
+def do_base_template_decorator(func: Callable):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        result = func(*args, **kwargs)
+        if type(result) == list:
+            for value in result:
+                if type(value) == str:
+                    result.remove(value)
+        return f'Your new message >>> {result}'
+    return wrapper
 
-def input_message(message):
-    result =  f'Your new message >>>> {message}'
+
+@do_base_template_decorator
+def input_message(message: Any):
+    result = message
     return result
 
 
-def create_new_message(func: Callable, arg, delete_type) -> None:
-    if type(arg) == list:
-        result = []
-        for value in arg:
-            result.append(value)
-            if type(value) == delete_type:
-                result.remove(value)
-        new_message = func(result)
-        return new_message
-    else:
-        new_message = func(arg)
-        return new_message
+print(input_message([55, 'll', 99, 'kk']))
 
 
-result_message = create_new_message(func=input_message, arg=['6666', 99], delete_type=int)
-print(result_message)

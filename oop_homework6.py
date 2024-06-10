@@ -3,12 +3,11 @@ class LibraryItem:
         self.title = title
         self.author_or_director = author_or_director
         self.year = year
-        pass
 
 
     def __str__(self):
-        result = f"Title: {self.title}, Author/Director: {self.author_or_director}, Year: {self.year}"
-        return result
+        return f"Title: {self.title}, Author/Director: {self.author_or_director}, Year: {self.year}"
+
 
 
 class Book:
